@@ -1,7 +1,13 @@
 <template>
   <v-slide-group>
     <v-slide-item v-for="(p, i) in products" :key="`p-${i}`">
-      <v-card link color="surface" width="300" class="el ma-2 mb-5 mr-5">
+      <v-card
+        nuxt
+        :to="`/products/${p.id}`"
+        color="surface"
+        width="300"
+        class="el ma-2 mb-5 mr-5"
+      >
         <v-img height="300" :src="p.image">
           <template #placeholder>
             <v-row class="fill-height" justify="center" align="center">
@@ -14,12 +20,12 @@
             </v-row>
           </template>
         </v-img>
-        <v-card-title class="text-md-body-1 font-weight-bold">{{
-          p.name
-        }}</v-card-title>
-        <v-card-subtitle class="primary--text pb-3">{{
-          p.price
-        }}</v-card-subtitle>
+        <v-card-title class="text-md-body-1 font-weight-bold">
+          {{ p.name }}
+        </v-card-title>
+        <v-card-subtitle class="primary--text pb-3">
+          {{ $formatMoney(p.price) }}
+        </v-card-subtitle>
         <v-card-text>
           <v-chip
             v-for="(t, i) in p.tags"
@@ -42,4 +48,4 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
+<style></style>

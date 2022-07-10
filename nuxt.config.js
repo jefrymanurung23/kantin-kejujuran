@@ -24,7 +24,7 @@ export default {
   css: ["~/assets/main.css", "@sweetalert2/theme-material-ui"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/cart.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

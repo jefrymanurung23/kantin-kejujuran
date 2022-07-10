@@ -18,7 +18,13 @@
         <v-icon size="20">mdi-store-outline</v-icon>
       </v-btn>
       <v-btn icon>
-        <v-icon size="20">mdi-cart-outline</v-icon>
+        <v-badge
+          v-if="$store.state.cart.cart.length > 0"
+          overlap
+          :content="$store.state.cart.cart.length"
+        >
+          <v-icon size="20">mdi-cart-outline</v-icon>
+        </v-badge>
       </v-btn>
       <v-divider vertical class="mx-md-5 mx-2" />
       <v-btn icon>
@@ -30,4 +36,4 @@
 <script>
 export default {};
 </script>
-<style scoped></style>
+<style></style>

@@ -29,4 +29,4 @@ export default {
   components: { ProductCarousel, ScrollTop },
 };
 </script>
-<style lang=""></style>
+<style></style>

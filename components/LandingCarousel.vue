@@ -21,15 +21,17 @@
               >
                 <h2 class="text-md-h3 text-h5">{{ si.name }}</h2>
                 <p class="text-md-h5 text-subtitle-1 primary--text mt-5">
-                  {{ si.price }}
+                  {{ $formatMoney(si.price) }}
                 </p>
                 <p class="text-md-body-2 mb-7">{{ si.description }}</p>
                 <v-btn
+                  nuxt
+                  :to="`/products/${si.id}`"
                   depressed
                   color="primary"
                   class="text-capitalize"
                   min-height="40"
-                  >Check It Out</v-btn
+                  >Yuk, Lihat!</v-btn
                 >
               </div>
             </v-col>
@@ -46,4 +48,4 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
+<style></style>
